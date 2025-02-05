@@ -6,7 +6,7 @@
 │   ├── /components
 │   │   ├── DonorList.jsx       # Affichage des derniers donateurs
 │   │   ├── DonationForm.jsx    # Formulaire de don
-│   │   ├── QRCodeDisplay.jsx [Généré avec CGPT]  # Affichage du QR Code
+│   │   ├── QRCodeDisplay.jsx   # Affichage du QR Code
 │   │   ├── ProgressBar.jsx     # Barre de progression du montant total
 │   ├── /pages
 │   │   ├── Home.jsx           # Page principale avec QR Code + Mur des Dons
