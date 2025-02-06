@@ -3,6 +3,16 @@
 │   ├── index.html              # Fichier principal HTML    
 │   ├── qr-code.png             # Image du QR Code (optionnel)
 │── /src
+│   ├── /backend
+│   │    ├── /Config
+│   │    │   ├── stripeConfig.js
+│   │    ├── /node_modules
+│   │    ├── /routes
+│   │    │   ├── paymentRoutes.js
+│   │    ├── .env
+│   │    ├── package-lock.json
+│   │    ├── package.json
+│   │    ├── server.js
 │   ├── /components
 │   │   ├── DonorList.jsx       # Affichage des derniers donateurs
 │   │   ├── DonationForm.jsx    # Formulaire de don
