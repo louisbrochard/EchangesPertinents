@@ -1,0 +1,48 @@
+/mon-projet-dons
+│── /public
+│   ├── index.html              # Fichier principal HTML    
+│   ├── qr-code.png             # Image du QR Code (optionnel)
+│── /src
+│   ├── /backend
+│   │    ├── /Config
+│   │    │   ├── stripeConfig.js
+│   │    ├── /node_modules
+│   │    ├── /routes
+│   │    │   ├── paymentRoutes.js
+│   │    ├── .env
+│   │    ├── package-lock.json
+│   │    ├── package.json
+│   │    ├── server.js
+│   ├── /components
+│   │   ├── DonorList.jsx       # Affichage des derniers donateurs
+│   │   ├── DonationForm.jsx    # Formulaire de don
+│   │   ├── QRCodeDisplay.jsx   # Affichage du QR Code
+│   │   ├── ProgressBar.jsx     # Barre de progression du montant total
+│   │   ├── DonationSuccess.jsx # Message de confirmation après don
+│   │   ├── Header.jsx          # En-tête de l'application
+│   │   ├── Footer.jsx          # Pied de page
+│   ├── /pages
+│   │   ├── Home.jsx            # Page principale avec QR Code + Mur des Dons
+│   │   ├── Donate.jsx          # Page avec le formulaire de don
+│   │   ├── Success.jsx         # Page de confirmation après paiement
+│   ├── /context
+│   │   ├── DonationsContext.jsx  # Gestion de l’état global avec Context API
+│   ├── /services
+│   │   ├── firebase.js         # Configuration de Firebase
+│   │   ├── stripe.js           # Connexion à Stripe (paiement)
+│   ├── /styles
+│   │   ├── global.css          # Styles globaux
+│   ├── /utils
+│   │   ├── formatCurrency.js   # Fonction pour formater l'argent
+│   │   ├── validateForm.js     # Fonctions de validation du formulaire
+│   ├── App.jsx                 # Composant principal
+│   ├── main.jsx                # Point d’entrée de l’application
+│── /backend                    # Backend pour Stripe (Node.js + Express)
+│   ├── server.js               # Serveur principal
+│   ├── /routes
+│   │   ├── paymentRoutes.js     # Gestion des paiements via Stripe
+│   ├── /config
+│   │   ├── stripeConfig.js      # Clé API Stripe sécurisée
+│── package.json                 # Dépendances et scripts
+│── .env                         # Variables d’environnement (clé Stripe, Firebase)
+│── README.md                    # Documentation du projet
