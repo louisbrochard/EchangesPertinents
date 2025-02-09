@@ -15,30 +15,17 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Importer les routes
+const paymentRoutes = require("./routes/paymentRoutes");
+const donorRoutes = require("./routes/donorRoutes");
+
+// Utiliser les routes
+app.use("/api/payments", paymentRoutes);
+app.use("/api/donors", donorRoutes);
+
 // Route de test
 app.get("/", (req, res) => {
     res.send("✅ Serveur Stripe opérationnel !");
-});
-
-// Route pour créer un paiement avec Stripe
-app.post("/create-payment-intent", async (req, res) => {
-    try {
-        const { amount, currency } = req.body;
-
-        if (!amount || !currency) {
-            return res.status(400).json({ error: "Montant et devise requis" });
-        }
-
-        const paymentIntent = await stripe.paymentIntents.create({
-            amount,
-            currency,
-        });
-
-        res.json({ clientSecret: paymentIntent.client_secret });
-    } catch (error) {
-        console.error("Erreur lors de la création du paiement :", error);
-        res.status(500).json({ error: "Erreur serveur" });
-    }
 });
 
 // Démarrer le serveur

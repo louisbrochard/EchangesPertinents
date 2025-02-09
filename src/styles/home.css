@@ -1,0 +1,84 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #F7F7F7;
+    padding-top: 100px; /* Espace sous la bannière */
+  }
+  
+  .content {
+    display: flex;
+    flex: 1;
+    padding: 40px; /* Ajout d'un espace autour */
+    align-items: center;
+    justify-content: center;
+    gap: 60px; /* Espace entre les éléments */
+  }
+  
+  /* QR Code à gauche */
+  .left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 480px; /* Ajustement hauteur */
+  }
+  
+  /* Jauge au centre */
+  .center {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 480px; /* Même hauteur que le QR Code */
+  }
+  
+  /* Mur des dons à droite */
+  .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px;
+    height: 480px; /* Alignement */
+  }
+  
+  /* QR Code bien proportionné */
+  .qr-code {
+    width: 100%;
+    max-width: 480px; /* Taille ajustée */
+    height: 480px; /* QR Code carré */
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Jauge plus équilibrée */
+  .progress-bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .progress-bar {
+    width: 20px;
+    height: 480px; /* Alignée sur le QR Code */
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .progress {
+    width: 100%;
+    background: linear-gradient(180deg, #4A90E2, #002F6C);
+    position: absolute;
+    bottom: 0;
+  }
+  
